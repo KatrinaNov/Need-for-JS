@@ -36,9 +36,9 @@ start.addEventListener('click', () => {
 for (let i = 0; i<levelBtn.length; i++) {
     levelBtn[i].addEventListener('click', function(){
         setting.speed = 6;
-        setting.traffic = 4;
+        setting.traffic = 3;
         setting.speed = setting.speed + i*2;
-        setting.traffic = setting.traffic - i;
+        setting.traffic = setting.traffic - i/2;
         startGame();
     })
 };
@@ -58,7 +58,7 @@ const setting = {
     score: 0,
     bestScore: 0,
     speed: 6,
-    traffic: 4
+    traffic: 3
 };
 // сколько элементов можно поместить на страницу
 function getQuantityElements(heightElement) {
@@ -102,7 +102,7 @@ function startGame(){
     setting.score = 0;
     setting.start = true;    
     gameArea.appendChild(car);
-    car.style.left = gameArea.offsetWidth/2 - car.offsetWidth;
+    car.style.left = gameArea.offsetWidth/2 - car.offsetWidth/2;
     car.style.top = 'auto';
     car.style.bottom = '10px';
 
