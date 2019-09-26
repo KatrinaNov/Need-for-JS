@@ -107,7 +107,8 @@ body{
 .best_score{
     position: absolute;
     top: 0;
-    left: 39%;
+    left: 50%;
+    transform: translateX(-140px);
     background: transparent;
     padding: 2rem 2rem;
     z-index: 200;
